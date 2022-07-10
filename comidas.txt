@@ -2,3 +2,6 @@ carne
 pizza
 batata frita
 peixe
+hamburguer
+lazanha
+misto

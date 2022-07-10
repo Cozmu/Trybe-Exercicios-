@@ -2,3 +2,6 @@ conhaque
 cerveja 
 suco 
 refrigerante
+nescau
+caldo
+mingau
