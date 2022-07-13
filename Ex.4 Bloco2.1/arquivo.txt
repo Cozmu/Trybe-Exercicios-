@@ -1,3 +1,1 @@
-Unix 
-Bash
-GIT
+
