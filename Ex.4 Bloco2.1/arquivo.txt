@@ -1,14 +1,9 @@
-<<<<<<< HEAD
-Unix
-Bash
-Git
-=======
 
-Unix 
-Bash
+UNIX
+BASH
 GIT
+INTERNET
 HTML
 CSS
-INTERNET
 BLOCO 3
->>>>>>> 0a526b692a2e4e1c669e56b06432d57907db7742
+
