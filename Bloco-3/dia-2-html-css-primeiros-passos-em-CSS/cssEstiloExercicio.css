@@ -1,13 +1,8 @@
 h1{
     font-size: 65px;
-    color: #4169E1	;
+    color: orange	;
     font-family: monospace;
     text-align: center;
-    font-style: italic;
-}
-p{
-    font-weight: 600;
-    font-size: 3em;
     font-style: italic;
 }
 body{
@@ -17,9 +12,6 @@ body{
 li{
     background-color: darkslateblue;
 }
-#estilo{
-    font-style: italic;
-}
-.coloração{
-    color: white;
+.cor-do-fundo{
+    background-color: #6A5ACD;
 }
