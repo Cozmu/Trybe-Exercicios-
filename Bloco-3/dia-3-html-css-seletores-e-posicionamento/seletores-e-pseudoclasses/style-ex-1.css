@@ -1,4 +1,4 @@
-h1, p{
+h1, p, h2{
     text-align: center;
 }
 li:hover{
@@ -13,4 +13,8 @@ body{
 }   
 li{
     list-style: none;
+    color: black;
+}
+.none{
+    text-decoration: none;
 }
