@@ -35,12 +35,13 @@ h1 {
 
 li {
     display: inline-block;
-   
+
 }
 
 .award {
     text-align: center;
 }
-.spacing{
+
+.spacing {
     margin-left: 330px;
 }
