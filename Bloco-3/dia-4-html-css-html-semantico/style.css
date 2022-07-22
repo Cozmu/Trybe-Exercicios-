@@ -1,0 +1,128 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #4a4e69;
+}
+
+header {
+    margin-top: 0;
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    background-color: #22223b;
+    color: white;
+    position: fixed;
+    z-index: 10;
+}
+
+.navegacao {
+    display: inline-block;
+    text-align: center;
+    background-color: #22223b;
+    border-top: 1px solid white;
+    width: 100%;
+}
+
+.nav {
+    color: white;
+    text-decoration-line: none;
+}
+
+.li {
+    display: inline-block;
+    margin: 0px 150px 0px 150px;
+}
+
+#main {
+    position: relative;
+    top: 100px;
+    margin-left: 3%;
+    margin-right: 3%;
+    background-color: #9a8c98;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    height: 100%;
+    margin-bottom: 100px;
+}
+
+#img {
+    border-radius: 20px;
+    display: inline-block;
+    margin: 5px 5px 5px 5px;
+}
+
+#text {
+    display: inline-block;
+    color: white;
+}
+
+h2 {
+    font-weight: bold;
+    font-size: 100px;
+    margin-bottom: 20px;
+}
+
+#foto {
+    border-radius: 10px;
+    margin: 5px;
+    border-style: double;
+    border-color: #c9ada7;
+}
+
+.descricao {
+    margin-left: 40px;
+    font-size: 25px;
+    color: white;
+    border-bottom: 2px double white;
+    margin-right: 40px;
+}
+
+#texto {
+    color: white;
+    margin: 30px 10px 10px 12px;
+}
+
+.titulo-secudario {
+    margin-left: 40px;
+    font-size: 25px;
+    color: white;
+    border-bottom: 2px double white;
+    margin-right: 40px;
+}
+
+#texto-secundario {
+    color: white;
+    margin: 30px 10px 10px 12px;
+}
+
+.familiares {
+    margin-left: 40px;
+    font-size: 25px;
+    color: white;
+    border-bottom: 2px double white;
+    margin-right: 40px;
+}
+
+#filhos {
+    color: white;
+    margin: 10px 10px 10px 60px;
+}
+
+#rodape {
+    width: 100%;
+    position: relative;
+    margin-bottom: 0;
+    background-color: #22223b;
+    z-index: 2;
+    height: 100px;
+
+}
+
+.direito {
+    text-align: end;
+    text-decoration-line: none;
+    color: white;
+}
