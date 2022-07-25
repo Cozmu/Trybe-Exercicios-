@@ -44,4 +44,3 @@ for(let nomes of names){
 
 
 
-
