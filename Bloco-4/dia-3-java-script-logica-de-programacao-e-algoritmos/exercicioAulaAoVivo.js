@@ -28,6 +28,14 @@ if (pessoaX < pessoaY && pessoaX < pessoaZ){
 
 
 
+//___-----------------------------------------------
+let maior = 0;
+let array = [9, 1, 2, 3, 9, 5, 7];
+maior += Math.max(...array);
+
+console.log(maior)
+
+
 
  
 

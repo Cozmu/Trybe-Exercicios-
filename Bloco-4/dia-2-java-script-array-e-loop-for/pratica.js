@@ -18,10 +18,10 @@ if (media > 20) {
     console.log('valor menor que 20');
 }
 //5
-//numbers = [5, 9, 3, 19, 70, 8, 100, 2, 35, 27];
+numbers = [5, 9, 3, 19, 70, 8, 100, 2, 35, 27];
 let maior = numbers[0];//a variavel maior esta recebendo o valor do indice 0 do array numbers, considerando 
 //assim o seu valor inicial e na logica o maior numero no estagio inicial.
-for (let index = 1; index < numbers.length; index += 1) {
+for (let index = 0; index < numbers.length; index += 1) {
     if (numbers[index] > maior) {
         maior = numbers[index]
     }
