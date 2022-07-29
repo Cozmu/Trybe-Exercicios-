@@ -16,7 +16,7 @@
         }
 
         .main-content {
-            background-color: yellow;
+            background-color: darkgray;
         }
 
         .main-content .center-content {
@@ -63,6 +63,8 @@
         let bodyPai = document.getElementsByTagName('body')[0];
         let tag = document.createElement('h1');
         bodyPai.appendChild(tag);
+        //10
+        tag.className = 'title'
         //2
         let main = document.createElement('main');
         bodyPai.appendChild(main);
@@ -71,6 +73,8 @@
         let sectionUm = document.createElement('section');
         main.appendChild(sectionUm);
         sectionUm.className = 'center-content';
+        //15
+        sectionUm.style.backgroundColor = 'green'
         //4
         let pUm = document.createElement('p');
         sectionUm.appendChild(pUm);
@@ -78,10 +82,13 @@
         let sectionDois = document.createElement('section');
         main.appendChild(sectionDois);
         sectionDois.className = 'left-content';
+        sectionDois.style.marginLeft = 'auto';  
         //6
         let sectionTres = document.createElement('section');
         main.appendChild(sectionTres);
         sectionTres.className = 'right-content';
+        //14
+        sectionTres.style.marginRight = 'auto';
         //7
         let imagem = document.createElement('img');
         sectionDois.appendChild(imagem);
@@ -97,16 +104,30 @@
             let itens = document.createElement('li');
             itens.innerText = conteudo;
             lista.appendChild(itens);
+            itens.className = 'itens';
         }
         //9
         function CriarTitulos(numero) {
             for (let index = 1; index <= numero; index += 1) {
                 let subTitulos = document.createElement('h3');
                 main.appendChild(subTitulos);
+                //11
+                subTitulos.className = 'description';
             }
             return subTitulos
         }
         CriarTitulos(3);
+    
+        let removedor = document.getElementsByClassName('itens');
+        for (let index = 0; index < removedor.length; index += 1) {
+            const element = removedor[index];
+            if(element.innerText.includes('nove', 'dez')){
+                lista.removeChild(element)
+            }
+            
+        }
+
+        
     </script>
 </body>
 
