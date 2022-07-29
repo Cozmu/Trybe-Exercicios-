@@ -82,7 +82,31 @@
         let sectionTres = document.createElement('section');
         main.appendChild(sectionTres);
         sectionTres.className = 'right-content';
+        //7
+        let imagem = document.createElement('img');
+        sectionDois.appendChild(imagem);
+        imagem.src = 'https://picsum.photos/200';
+        imagem.className = 'small-image';
+        //8
+        let lista = document.createElement('ul');
+        sectionDois.appendChild(lista);
+        let conteudoLista = ['um', 'dois', 'tres', 'quatro', 'cinco', 'seis', 'sete', 'oito', 'nove', 'dez']
+        for (let index = 0; index < conteudoLista.length; index += 1) {
+            let conteudo = conteudoLista[index];
 
+            let itens = document.createElement('li');
+            itens.innerText = conteudo;
+            lista.appendChild(itens);
+        }
+        //9
+        function CriarTitulos(numero) {
+            for (let index = 1; index <= numero; index += 1) {
+                let subTitulos = document.createElement('h3');
+                main.appendChild(subTitulos);
+            }
+            return subTitulos
+        }
+        CriarTitulos(3);
     </script>
 </body>
 
