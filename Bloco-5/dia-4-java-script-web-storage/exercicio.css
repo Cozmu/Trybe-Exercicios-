@@ -3,18 +3,49 @@
     padding: 0;
 }
 
+body {
+    position: absolute;
+}
+
+header {
+    position: fixed;
+    width: 100%;
+    margin-top: 0;
+    text-align: center;
+    z-index: 10;
+    background-color: #14213d;
+    color: white;
+}
+
+#cor {
+    text-align: left;
+}
+#titulo {}
+
+#lista{
+    text-decoration-line: none;
+    display: inline-block;
+    margin-right: 30px;
+}
+#navegacao {
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
 #conteudo {
+    position: relative;
+    z-index: 1;
     text-align: center;
     width: 50%;
     margin-left: 25%;
     margin-right: 25%;
+    margin-top: 100px;
+
 }
 
 
-#titulo {
-    
-}
 
 #texto {
-   
+
+
 }
