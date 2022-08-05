@@ -1,0 +1,39 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Josefin Sans', sans-serif;
+    background-color: #cad2c5;
+
+}
+
+#conteudo {
+    background-color: white;
+    width: 80%;
+    margin: auto;
+    margin-top: 70px;
+    padding: 10px;
+}
+
+#nome {
+    margin: 10px;
+    width: 750px;
+
+}
+
+#nome-completo {
+    width: 70%;
+    height: 30px;
+}
+
+#exibicao {
+    margin: 10px;
+}
+
+#nome-exibicao {
+    width: 70%;
+    height: 30px;
+}
