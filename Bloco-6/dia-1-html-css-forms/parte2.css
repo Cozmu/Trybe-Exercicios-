@@ -36,7 +36,7 @@ body {
     text-align: center;
     margin: auto auto;
     height: 35px;
-    background-color: #edf2f4;
+    background-color:  #edf2f4; 
     border-radius: 3px;
     border: solid 1px black;
     margin-top: 80px;
@@ -47,7 +47,7 @@ body {
     text-align: center;
     margin: auto auto;
     height: 35px;
-    background-color: #edf2f4;
+    background-color:  #edf2f4;
     border-radius: 3px;
     border: solid 1px black;
     margin-top: 10px;
@@ -60,13 +60,19 @@ body {
 }
 
 #senha-usuario {
-    height: 31px;
-    width: 155px;
+    height: 35px;
+    width: 159px;
+    border: none;
+    border-radius: 3px;
 }
 
 #email-usuario {
-    height: 31px;
-    width: 158px;
+    height: 35px;
+    width: 162px;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 18px;
+    border: none;
+    border-radius: 3px;
 }
 
 #check {
@@ -90,6 +96,7 @@ body {
     font-family: 'Josefin Sans', sans-serif;
     cursor: pointer;
 }
+
 #entrar:hover {
     background-color: #e5e5e5;
 }

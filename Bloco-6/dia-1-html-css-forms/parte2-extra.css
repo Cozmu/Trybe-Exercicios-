@@ -18,10 +18,14 @@ body {
     padding: 10px;
 }
 
+#name-e-exhibition {
+    display: inline-block;
+    width: 50%;
+}
+
 #nome {
     margin: 10px;
-    width: 750px;
-
+    /* width: 750px; */
 }
 
 #nome-completo {
@@ -36,4 +40,24 @@ body {
 #nome-exibicao {
     width: 70%;
     height: 30px;
+}
+
+#pefil {
+    float: right;
+    margin: 10px 10px;
+    margin-right: 10px;
+    width: 180px;
+    height: 180px;
+}
+
+#foto {
+    display: none;
+}
+
+#label {
+    background-color: red;
+    display: inline-block;
+    text-align: center;
+    width: 180px;
+    height: 180px;
 }
