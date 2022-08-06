@@ -16,11 +16,13 @@ body {
     margin: auto;
     margin-top: 70px;
     padding: 10px;
+    padding-bottom: 40px;
+    border-radius: 5px;
 }
 
 #name-e-exhibition {
     display: inline-block;
-    width: 50%;
+    width: 80%;
 }
 
 #nome {
@@ -44,8 +46,8 @@ body {
 
 #pefil {
     float: right;
-    margin: 10px 10px;
-    margin-right: 10px;
+    margin: 10px;
+    margin-right: 20px;
     width: 180px;
     height: 180px;
 }
@@ -55,9 +57,45 @@ body {
 }
 
 #label {
-    background-color: red;
-    display: inline-block;
+    background-color: #edf2f4;
+    display: block;
     text-align: center;
     width: 180px;
     height: 180px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#tel-e-data {
+    width: 80%;
+    display: inline-block;
+}
+
+#nascimento {
+    display: inline-block;
+}
+
+#data {
+    height: 30px;
+    margin-left: 10px;
+    width: 150px;
+    text-align: center;
+}
+
+#label-data {
+    margin-left: 10px;
+}
+
+#celular {
+    display: inline-block;
+}
+
+#numero-cll {
+    height: 30px;
+    margin-left: 40px;
+    text-align: center;
+}
+
+#label-numero {
+    margin-left: 40px;
 }
