@@ -10,6 +10,10 @@ body {
 
 }
 
+input {
+    font-family: 'Josefin Sans', sans-serif;
+}
+
 #conteudo {
     background-color: white;
     width: 80%;
