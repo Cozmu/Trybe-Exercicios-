@@ -15,7 +15,7 @@ const books = [
         genre: 'Fantasia',
         author: {
             name: 'J. R. R. Tolkien',
-            birthYear: 1892,
+            birthYear: 1892, //auterado
         },
         releaseYear: 1954,
     },
@@ -55,7 +55,7 @@ const books = [
         genre: 'Terror',
         author: {
             name: 'H. P. Lovecraft',
-            birthYear: 1890,
+            birthYear: 1890, //auterado
         },
         releaseYear: 1928,
     },
@@ -70,11 +70,40 @@ console.log(authorBornIn1947(books, 1947));
 function smallerName(arr) {
     let nameBook;
     arr.forEach(element => {
-        if (!nameBook || element.name.length > nameBook.length) {
+        if (!nameBook || element.name.length < nameBook.length) {
             nameBook = element.name;
-        } 
+        }
     });
     return nameBook;
 }
 console.log(smallerName(books));
-
+//3
+function getNamedBook(arr, tamanho) {
+    return arr.find((element) => element.name.length === tamanho).name;
+}
+console.log(getNamedBook(books, 26));
+//4
+function booksOrderedByReleaseYearDesc() {
+    return books.sort((a, b) => b.releaseYear - a.releaseYear)
+}
+console.log(booksOrderedByReleaseYearDesc());
+//5
+function everyoneWasBornOnSecXX() {
+    return books.every((element) => element.author.birthYear >= 1901 && element.author.birthYear <= 2000)
+}
+console.log(everyoneWasBornOnSecXX());
+//6
+function someBookWasReleaseOnThe80s() {
+    return books.some((element) => element.releaseYear >= 1980 && element.releaseYear <= 1989)
+}
+console.log(someBookWasReleaseOnThe80s());
+//7
+function authorUnique() {
+    return books.every((element) => {
+        !books.some((elementDois) => {
+            (elementDois.author.birthYear === element.author.birthYear)
+                && (elementDois.author.name !== element.author.name)
+        })
+    })
+}
+console.log(authorUnique());
