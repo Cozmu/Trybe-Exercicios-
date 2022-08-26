@@ -137,7 +137,7 @@ const yearSeasons = {
 };
 
 const ano = ({spring, summer, autumn, winter}) => {
-    let mesesDoAno = [...spring, ...summer, ...autumn, ...winter]
+    let mesesDoAno = [...spring, ...summer, ...autumn, ...winter] //tem que ser o mesmo nome das chaves
     return mesesDoAno
 }
 console.log(ano(yearSeasons));
