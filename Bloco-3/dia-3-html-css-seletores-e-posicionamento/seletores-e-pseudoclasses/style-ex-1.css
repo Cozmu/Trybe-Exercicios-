@@ -1,0 +1,20 @@
+h1, p, h2{
+    text-align: center;
+}
+li:hover{
+ background-color: black;
+ color: white;
+}
+li:active{
+  font-family: 'Courier New', Courier, monospace;
+}  
+body{
+    background-color: #ccd5ae;
+}   
+li{
+    list-style: none;
+    color: black;
+}
+.none{
+    text-decoration: none;
+}

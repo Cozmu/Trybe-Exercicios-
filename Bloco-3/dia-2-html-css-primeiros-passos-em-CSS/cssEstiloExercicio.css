@@ -1,25 +1,38 @@
 h1{
     font-size: 65px;
-    color: #4169E1	;
-    font-family: monospace;
-    text-align: center;
-    font-style: italic;
-}
-p{
-    font-weight: 600;
-    font-size: 3em;
-    font-style: italic;
+    color: orange	;
+    font-family: sans-serif;
+    font-style: oblique;
+    
 }
 body{
     background-color: #E6E6FA;
     font-size: 16px;
+ color: white;
 }
 li{
     background-color: darkslateblue;
+    line-height: 30px;
+    text-align: center;
 }
-#estilo{
-    font-style: italic;
+.cor-do-fundo{
+    background-color: #6A5ACD;
+    font-weight: 600;
 }
-.coloração{
-    color: white;
+p{
+    font-size: 3em;
+   text-decoration-color: #8d99ae	;
+   text-decoration-line: underline;
+   text-decoration-thickness: 3px;
+   text-decoration-style: double;
+}
+#amarelo{
+    background-color:	#FFD700;
+   
+}
+#vermelho{
+    background-color:  red;
+}
+#marrom{
+    background-color:  sienna;
 }

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <header>
+      <h2 id="page-title">Título</h2>
+      <p id="paragraph" class="paragrafos">Dê uma cor para este parágrafo!</p>
+      <h4 id="subtitle" class="sub">Subtítulo</h4>
+      <p id="second-paragraph" class="paragrafos">Segundo parágrafo!</p>
+    </header>
+    <script>
+      const paragraph = document.getElementById("paragraph");
+      paragraph.style.color = "red";
+      const tituloPrincipal = document.querySelector('#page-title')
+      tituloPrincipal.innerText = 'Clube da Luta';
+      const segundoParagrafo = document.querySelector('#second-paragraph');
+      segundoParagrafo.style.background = 'blue';
+      segundoParagrafo.style.color = 'white';
+      const subtitulo = document.getElementById('subtitle');
+      subtitulo.innerHTML = 'gosto de chainsaw man'
+      subtitulo.style.color = '#ccd5ae'
+      document.getElementsByClassName('paragrafos')[0].style.background = '#f8ad9d'
+/*       document.getElementsByClassName('sub')[0].style.color = '#ccd5ae'
+ */
+    </script>
+  </body>
+</html>

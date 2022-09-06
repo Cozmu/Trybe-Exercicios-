@@ -1,0 +1,105 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Josefin Sans', sans-serif;
+    background-color: #cad2c5;
+
+}
+
+input {
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+#conteudo {
+    background-color: white;
+    width: 80%;
+    margin: auto;
+    margin-top: 70px;
+    padding: 10px;
+    padding-bottom: 40px;
+    border-radius: 5px;
+}
+
+#name-e-exhibition {
+    display: inline-block;
+    width: 80%;
+}
+
+#nome {
+    margin: 10px;
+    /* width: 750px; */
+}
+
+#nome-completo {
+    width: 70%;
+    height: 30px;
+}
+
+#exibicao {
+    margin: 10px;
+}
+
+#nome-exibicao {
+    width: 70%;
+    height: 30px;
+}
+
+#pefil {
+    float: right;
+    margin: 10px;
+    margin-right: 20px;
+    width: 180px;
+    height: 180px;
+}
+
+#foto {
+    display: none;
+}
+
+#label {
+    background-color: #edf2f4;
+    display: block;
+    text-align: center;
+    width: 180px;
+    height: 180px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#tel-e-data {
+    width: 80%;
+    display: inline-block;
+}
+
+#nascimento {
+    display: inline-block;
+}
+
+#data {
+    height: 30px;
+    margin-left: 10px;
+    width: 150px;
+    text-align: center;
+}
+
+#label-data {
+    margin-left: 10px;
+}
+
+#celular {
+    display: inline-block;
+}
+
+#numero-cll {
+    height: 30px;
+    margin-left: 40px;
+    text-align: center;
+}
+
+#label-numero {
+    margin-left: 40px;
+}
