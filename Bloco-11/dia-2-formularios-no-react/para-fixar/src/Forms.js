@@ -4,7 +4,7 @@ class Forms extends React.Component {
 state = {
   number: 0,
   text: '',
-  check: false,
+  checkbox: false,
 }
 
 handleChange = ({ target }) => {
@@ -47,3 +47,8 @@ render() {
 }
 
 export default Forms;
+
+
+{/* <div className="json">
+<pre>{JSON.stringify(this.state, null, 2)}</pre>
+</div> */}
