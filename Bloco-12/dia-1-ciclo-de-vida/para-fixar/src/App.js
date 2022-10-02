@@ -12,7 +12,6 @@ class App extends React.Component{
     const endPoint = 'https://api.randomuser.me/';
     const data = await fetch(endPoint);
     const result = await data.json();
-    console.log(result.results);
     this.setState((prev) => ({ 
       api: result.results, 
       loading: !prev.loading,
