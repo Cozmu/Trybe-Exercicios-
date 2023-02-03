@@ -1,6 +1,7 @@
 const mysql = require('mysql2/promise');
+require('dotenv').config();
 
-const connection = mysql.createPool({
+const connection = mysql.createPool({ 
   host: process.env.MYSQL_HOST,
   port: process.env.MYSQL_PORT,
   user: process.env.MYSQL_USER,
@@ -9,6 +10,14 @@ const connection = mysql.createPool({
   waitForConnections: process.env.MYSQL_WAIT_FOR_CONNECTIONS,
   connectionLimit: process.env.MYSQL_CONNECTION_LIMIT,
   queueLimit: process.env.MYSQL_QUEUE_LIMIT,
+  // host: 'localhost',
+  // port: 33060,
+  // user: 'root',
+  // password: 'root',
+  // database: 'trybecashdb',
+  // waitForConnections: true,
+  // connectionLimit: 10,
+  // queueLimit: 0,
 });
 
 module.exports = connection;
