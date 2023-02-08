@@ -19,9 +19,9 @@ const update = (person, id) => conn.execute(
 const remove = (id) => conn.execute('DELETE FROM people WHERE id = ?', [id]);
 
 module.exports = {
-    findAll,
-    findById,
-    insert,
-    update,
-    remove,
+  findAll,
+  findById,
+  insert,
+  update,
+  remove,
 };
