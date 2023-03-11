@@ -136,6 +136,7 @@ const goiabadaEQueijo: PizzaSugar = {
 }
 
 // 5
+
 type callbackFilter<T> = (value: T, index?: number, array?: Array<T>) => boolean;
 
 function myFilter<T>(array: Array<T>, callback: callbackFilter<T>): Array<T> {
