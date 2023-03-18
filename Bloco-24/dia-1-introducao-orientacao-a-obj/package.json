@@ -1,0 +1,20 @@
+{
+  "name": "dia-1-introducao-orientacao-a-obj",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon --exec npx ts-node exercicio.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "16.11",
+    "nodemon": "2.0.15",
+    "typescript": "4.4"
+  },
+  "dependencies": {
+    "ts-node": "^10.9.1"
+  }
+}
