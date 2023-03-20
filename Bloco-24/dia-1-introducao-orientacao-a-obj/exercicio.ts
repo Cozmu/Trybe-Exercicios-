@@ -1,39 +1,123 @@
 console.log('funcionando');
 
-class estudante {
-  private _matricula: string;
-  private _nome: string;
-  private _notaProva: number[];
-  private _notaTrabalho: number[];
+class Person {
+  constructor(
+    private _name:string,
+    private _birthDate:Date,
+  ) {
+    this.name = _name, 
+    this.birthDate = _birthDate
+  };
 
-  constructor(m: string, n: string, np: number[], nt: number[]) {
-    this._matricula = m;
-    this._nome = n;
-    this._notaProva = np;
-    this._notaTrabalho = nt;
+  get name():string {
+    return this._name;
   }
 
-  get notasProvas():string[] {
-    return this._notaProva.map((nota) => `Nota de prova => ${nota}`)
+  get birthDate():Date {
+    return this._birthDate;
   }
 
-  get somaNota() {
-    const notaTotal = [...this._notaProva, ...this._notaTrabalho];
+  private validateName(name:string):void {
+    if (name.length < 3) throw new Error('O nome dete ter no minimo tres caracteres');
+  }
+
+  set name(value:string) {
+    this.validateName(value)
+    this._name = value;
+  }
+
+  private getAge(date:Date):number {
+    const ageInMs = new Date().getTime() - date.getTime();
+    const oneYearInMs:number = 31_536_000_000;
+    return Math.floor(ageInMs/oneYearInMs);
+  }
+
+  private validateBirthDate(birthDate: Date):void {
+    if (birthDate.getTime() > new Date().getTime()) {
+      throw new Error('A data de nascimento não pode ser uma data no futuro');
+    }
+    if (this.getAge(birthDate) > 120) throw new Error('A pessoa não pode ter mais que 120 anos!');
+  }
+
+  set birthDate(value:Date) {
+    this.validateBirthDate(value);
+    this._birthDate = value;
+  }
+}
+
+const newPerson = new Person('jorge', new Date("1999/01/01"));
+// console.log(newPerson.name);
+// console.log(newPerson.birthDate);
+
+
+class Student extends Person {
+  constructor(
+    private _enrollment: string,
+    private _examsGrades: number[],
+    private _assignmentsGrades: number[],
+    birthDate: Date,
+    name: string,
+  ) {
+    super(name, birthDate);
+    this.enrollment = _enrollment
+    this.examsGrades = _examsGrades;
+    this.assignmentsGrades = _assignmentsGrades;
+  }
+
+  get sumGrades():number {
+    const notaTotal = [...this._examsGrades, ...this._assignmentsGrades];
     return notaTotal.reduce((anterior, atual) => {
       return atual + anterior
     }, 0);
   }
 
-  get mediaNota() {
-    const notas = this._notaProva.length + this._notaTrabalho.length;
-    return Math.round(this.somaNota / notas)
+  get sumAverageGrade():number {
+    const notas = this._examsGrades.length + this._assignmentsGrades.length;
+    return Math.round(this.sumGrades / notas);
+  }
+
+  get generateEnrollment():string {
+    return this._enrollment;
+  }
+
+  private validateEnrollment(enrollment:string):void {
+    if (enrollment.length < 16) {
+      throw new Error('A matrícula deve possuir no mínimo 16 caracteres');
+    };
+  }
+
+  set enrollment(value: string) {
+    this.validateEnrollment(value);
+    this._enrollment = value; 
+  }
+
+  private validateExamsGrades(note:number[]):void {
+    if (note.length > 4) {
+      throw new Error('A pessoa estudante deve possuir no máximo 4 notas de provas');
+    };
+  }
+
+  set examsGrades(note:number[]) {
+    this.validateExamsGrades(note);
+    this._examsGrades = note; // ue mas nao fina repetido??
+  }
+  
+  private validateAssignmentsGrades(note:number[]):void {
+    if (note.length > 2) {
+      throw new Error('A pessoa estudante deve possuir no máximo 2 notas de trabalhos');
+    };
+  }
+
+  set assignmentsGrades(note: number[]) {
+    this.validateAssignmentsGrades(note);
+    this._assignmentsGrades = note;
   }
 }
 
-const aluno1 = new estudante('01-01-2001', 'jorge', [10, 8, 6, 8], [3, 2]);
-console.log(aluno1.notasProvas);
-console.log(aluno1.somaNota);
-console.log(aluno1.mediaNota);
+
+const aluno1 = new Student('aaaaaaaaaaaaaaaaaaaaaaa', [10, 8, 2, 3], [3, 2], new Date("1999/01/01"), 'jorge');
+console.log(aluno1);
+
 
 
 interface Ipedido {
@@ -75,8 +159,8 @@ class Cliente {
 }
 
 const cliente1 = new Cliente('Maria', [{nome:'pizza', preco: 30}], 'cartao', 0.10);
-console.log(cliente1.totalPedido);
-console.log(cliente1.calculaDesconto);
+// console.log(cliente1.totalPedido);
+// console.log(cliente1.calculaDesconto);
 
 
 class data {
@@ -113,4 +197,4 @@ class data {
 } 
 
 const newDate = new data(2001, 12, 3);
-console.log(newDate.visualizacao);
+// console.log(newDate.visualizacao);
