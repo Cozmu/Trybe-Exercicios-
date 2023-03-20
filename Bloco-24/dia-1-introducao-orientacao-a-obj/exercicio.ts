@@ -114,11 +114,18 @@ class Student extends Person {
   }
 }
 
-
 const aluno1 = new Student('aaaaaaaaaaaaaaaaaaaaaaa', [10, 8, 2, 3], [3, 2], new Date("1999/01/01"), 'jorge');
 console.log(aluno1);
 
+interface Employee {
+  registration:number,
+  salary:number,
+  admissionDate:Date,
+  generateRegistration():string,
+}
 
+
+// -------------------------------------------------------------
 
 interface Ipedido {
   nome: string;
