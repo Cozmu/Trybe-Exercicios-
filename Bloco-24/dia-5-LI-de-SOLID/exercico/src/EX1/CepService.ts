@@ -1,10 +1,10 @@
-import FooCepAPI from './FooCepAPI';
+import ICepAPI from "./ICepApi";
 
 class CepService {
-  private readonly cepApi: FooCepAPI;
+  private readonly cepApi: ICepAPI;
 
-  constructor(cepApi: FooCepAPI) {
-    this.cepApi = cepApi; // mudar
+  constructor(cepApi: ICepAPI) {
+    this.cepApi = cepApi; 
   }
 
   addressByCep(cep: string, num: number) {
