@@ -1,0 +1,68 @@
+use('exercicio')
+db.restaurants.countDocuments({ borough: { $in: ['Queens', 'Staten Island', 'Bronx'] } })
+
+use('exercicio')
+db.restaurants.countDocuments({ cuisine: { $ne: 'American' } })
+
+use('exercicio')
+db.restaurants.countDocuments({ rating: { $gte: 8 } })
+
+use('exercicio')
+db.restaurants.countDocuments({ rating: { $lt: 8 } })
+
+use('exercicio')
+db.restaurants.countDocuments({ rating: { $nin: [5, 6, 7] } })
+
+//exemplo de uso do $exists
+use('exercicio')
+db.restaurants.find({ qty: { $exists: true, $nin: [ 5, 15 ] } })
+
+use('exercicio')
+db.restaurants.countDocuments({ rating: { $not: { $lte: 5 } } })
+
+use('exercicio')
+db.restaurants.countDocuments({ $or: [{rating: { $gte: 6 }}, { borough: 'borough' }] })
+
+use('exercicio')
+db.restaurants.countDocuments({ $and: [
+  {borough: { $in: ['Queens', 'Staten Island', 'Brooklyn'] }}, 
+  {rating: { $gt: 4 }}
+  ]})
+
+use('exercicio')
+db.restaurants.countDocuments({
+  $nor: [{ rating: 1  }, { cuisine: "American" }]
+})
+
+use('exercicio')
+db.restaurants.countDocuments({
+  $and: [
+    { $or: [{ rating: { $gt: 6, $lt: 10 } }] },
+    { $or: [{ borough: 'Brooklyn' }, { cuisine: { $ne: 'Delicatessen' } }] }
+  ]
+})
+
+use('exercicio')
+db.example.insertMany([
+    { "name": "Mandioquinha Frita", "price": 14 },
+    { "name": "Litrão", "price": 8 },
+    { "name": "Torresmo", "price": 16 }
+])
+
+use('exercicio')
+db.example.find().sort({ "price": 1 }).pretty()
+
+use('exercicio')
+db.example.find().sort({ "price": -1, "name" : 1 }).pretty()
+
+use('exercicio')
+db.restaurants.find().sort({ "name": 1 })
+
+use('exercicio')
+db.restaurants.find().sort({ "rating": -1 })
+
+use('exercicio')
+db.restaurants.deleteOne({ cuisine: 'Ice Cream, Gelato, Yogurt, Ices' })
+
+use('exercicio')
+db.restaurants.deleteMany({ cuisine: "American" });
