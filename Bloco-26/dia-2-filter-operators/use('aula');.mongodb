@@ -1,0 +1,53 @@
+use('aula');
+// db.filmes.drop();
+
+// db.filmes.find({ ano: { $lt: 2000 } })
+
+// db.filmes.find({ ano: { $lte: 2000 } }).sort({ ano: -1 })
+
+// db.filmes.find({ ano: { $gt: 1993 } }).sort({ ano: 1 })
+
+// db.filmes.find({ ano: { $gte: 1993 } }).sort({ ano: 1 })
+
+// db.filmes.find({$and: 
+//   [
+//     { ano: { $gte: 1993 } },
+//     { ano: { $lte: 2000 } }
+//   ]
+// }).sort({ ano: 1 })
+
+// db.filmes.find({ ano: { $eq: 1993 }})
+
+// db.filmes.find({ 'avaliacao.bom': 7 })
+
+// db.filmes.find({ 'avaliacao.bom': { $ne: 7 } }) // ou nin
+
+// db.filmes.find({ ano: { $in: [2001, 1968, 1995] } })
+
+// db.filmes.find({ ano: { $nin: [2008, 2013] }})
+
+// db.filmes.find({
+//   $and:
+//   [
+//     {ano: { $gt: 2000 }},
+//     {"avaliacao.bom": { $gte: 8 }}
+//   ]
+// })
+
+// db.filmes.find({
+//   $or: [
+//     {ano: { $gt: 2000 }},
+//     {"avaliacao.bom": { $gte: 8 }}
+//   ]
+// })
+
+// db.filmes.find({ diretor: { $not: { $eq: 'Michael Bay' } } })
+
+// db.filmes.find({ // !(a || b)
+//   $nor:
+//   [
+//     { diretor: 'Michael Bay' },
+//     { "avaliacao.bom": 10 }
+//   ]
+// })
+
