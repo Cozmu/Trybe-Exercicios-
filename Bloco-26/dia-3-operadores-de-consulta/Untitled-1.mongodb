@@ -37,7 +37,7 @@
 
 // db.product.find({ description: { $regex: /^M/ } })
 
-// ^ quando nao quero nada no começo e $ quando nao quero nada no final
+// ^ quando nao quero nada no começo e .$ quando nao quero nada no final
 
 // db.products.find({ sku: { $regex: /^ABC/i } }); // i depois da barra case-insensitive
 
