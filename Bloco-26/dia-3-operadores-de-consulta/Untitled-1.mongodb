@@ -1,0 +1,45 @@
+// db.inventory.find(
+//   { tags: { $all: [ "ssl", "security" ] } }
+// ); // utilização do all para retornar um array, independentemente da existência de outros valores ou a ordem em que os elementos estejam. 
+
+ use('useElemMatch')
+//  db.scores.find(
+//    { results: { $elemMatch: { $gte: 80, $lt: 85 } } }
+//  );
+
+// db.score.find({ // results e um array por isso isso nao funciona
+//   $and: [
+//     {results: { $gte: 80 }},
+//     {results: { $lt: 85 }}
+//   ]
+// })
+
+// db.survey.find(
+//   { results: { $elemMatch: { product: "xyz", score: { $gte: 8 } } } }
+// );
+
+// db.survey.find(
+//   { "results.product": "xyz" }
+// ); // query confunsa pq results nao e um obj mas da de acessar por ponto
+
+// db.products.find(
+//   { tags: { $size: 2 } }
+// );
+
+
+// db.monthlyBudget.find(
+//   {
+//     $expr: { $gt: [ "$budget", "$spent" ] }
+//   }
+// ); // e se for outro tipo de valor sem ser numero?
+
+// db.product.find()
+
+// db.product.find({ description: { $regex: /^M/ } })
+
+// ^ quando nao quero nada no começo e $ quando nao quero nada no final
+
+// db.products.find({ sku: { $regex: /^ABC/i } }); // i depois da barra case-insensitive
+
+// db.inventory.find({ qty: { $mod: [4, 0] } }); 
+// modulo e o que sobra quando divide, que nao caso divide por 4 e espera 0
