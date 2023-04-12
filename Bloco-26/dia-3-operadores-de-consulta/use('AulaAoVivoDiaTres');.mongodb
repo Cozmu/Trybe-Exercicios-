@@ -1,0 +1,33 @@
+use('AulaAoVivoDiaTres');
+// db.itens.find({
+//   tags: { 
+//     $all: [ 'lemon', 'orange' ]
+//   }
+// })
+
+// db.itens.find({
+//   quantidade: { $elemMatch: { $gte: 70, $lte: 100 } } 
+// })
+
+// db.itens.find({
+//   quantidade: { $get: 100 }
+// }).count()
+
+// db.itens.find({
+//   tags: {
+//     $size: 3
+//   }
+// })
+
+// db.itens.find({
+//   $expr: { $gt: [ '$valor_entrada_itens', '$valor_saida_itens' ] }
+// })
+
+// db.itens.find({
+//   categoria: { $regex: /papel/i  }
+// })
+
+
+// db.itens.find({
+//   valor_entrada_itens: { $mod: [2, 0] } 
+// })
