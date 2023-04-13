@@ -1,0 +1,111 @@
+use('conteudo-13-04');
+// db.inventory.updateOne(
+//   { item: "paper" }, // filtro
+//   { $set: { "size.uom": "cm", status: "P" } } // o que e atualizado
+// );
+
+// se filtro for vazio no many atauliza tudo e no one atualiza o primeiro documento da coleção
+
+// db.inventory.updateMany(
+//   { "qty": { $lt: 50 } }, 
+//   { $set: { "size.uom": "in", status: "P" } }
+// );
+
+    
+// db.products.updateOne(
+//   { _id: 100 },
+//   { $set: {
+//       quantity: 500,
+//       details: { model: "14Q3", make: "xyz" },
+//       tags: [ "coats", "outerwear", "clothing" ]
+//     } // array atualiza tudo nao adicina novos
+//   }
+// );
+
+// db.products.updateOne(
+//   { _id: 100 },
+//   { $set: { "details.make": "zzz" } }
+// ); // ex de obj dentro do documento capturado por dot notation
+
+//  db.products.updateOne(
+//    { _id: 100 },
+//    { $set: {
+//        "tags.1": "rain gear",
+//        "ratings.0.rating": 2
+//      }
+//    }
+//  ); // att de indice especifico de array
+
+// db.products.updateOne(
+//   { _id: 1 },
+//   { $mul: { price: NumberDecimal("1.25"), qty: 2 } }
+// );  // simplesmente multiplicar o valor que ta no campo pelo valor apresentado
+
+// db.products.updateOne(
+//   { _id: 2 },
+//   { $mul: { price: NumberLong("100") } }
+// ); // se o campo nao existir vai ser criado com o valor do tipo que foi passado na operação (no caso numero inteiro)
+
+
+// se os tipos forem diferentes faz o calculo mesmo assim
+// db.products.updateOne(
+//   { _id: 3 },
+//   { $mul: { price: NumberInt(5) } }
+// );
+
+// db.increment.updateOne(
+//   { sku: "abc123" },
+//   { $inc: { quantity: -2, "metrics.orders": 1 } }
+// ); // fazer up de soma e subtração com os campos
+
+// db.collection.updateMany({}, { $max: { campo: 75 } });
+// Atualizando todos os valores do atributo "campo"
+// para 75 caso sejam menores
+// $max: “arrasta” os valores para cima.
+
+
+// db.collection.updateMany({}, { $min: { campo: 42 } });
+// Atualizando todos os valores do atributo "campo"
+// para 42 caso sejam maiores
+// $min: “arrasta” os valores para baixo.
+
+// db.scores.updateOne({ _id: 1 }, { $min: { lowScore: 150 } });
+// o campo do update tem que ser menor que oq ta no documento
+// db.scores.updateOne({ _id: 1 }, { $max: { highScore: 950 } });
+// o campo do update tem que ser maior que oq ta no documento
+
+// db.tags.updateOne(
+//   { _id: 1 },
+//   {
+//     $min: { dateEntered: new Date("2019-09-25") },
+//     $max: { dateExpired: new Date("2019-10-02") }
+//   }
+// );
+// se a data do min for antes (menor) do que ta no documento ele att
+// se a data do max for depois (maior) do que ta no documento ele att
+
+// db.customers.updateOne(
+//   { _id: 1 },
+//   { $currentDate: {
+//       lastModified: true,
+//       "cancellation.date": { $type: "timestamp" }
+//       // as duas formas de adicionar data: { $type: "timestamp || date" } ou colocando true no campo pelo $currentDate
+//     }, $set: {
+//       "cancellation.reason": "user request",
+//       status: "D"
+//     }
+//   }
+// );
+
+// db.fruits.updateOne(
+//   { name: "Banana" },
+//   { $rename: {
+//       "name": "productName" // nome atual : nome que vai ser
+//     }
+//   }
+// );
+
+// db.fruits.updateMany(
+//   { productName: "Banana" },
+//   { $unset: { quantity: "" } }  // remove chave 
+// );
