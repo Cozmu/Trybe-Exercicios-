@@ -1,0 +1,124 @@
+use('sales');
+// db.supplies.updateOne(
+//   { _id: 1 },
+//   {
+//     $push: {
+//       items: {
+//         "name": "notepad",
+//         "price":  35.29,
+//         "quantity": 2,
+//       },
+//     },
+//   },
+//   { upsert: true },
+// );
+
+// db.supplies.updateOne(
+//   {},
+//   {
+//     $push: {
+//       items: {
+//         $each: [
+//           {
+//             "name": "pens",
+//             "price": 56.12,
+//             "quantity": 5,
+//           },
+//           {
+//             "name": "envelopes",
+//             "price": 19.95,
+//             "quantity": 8,
+//           },
+//         ],
+//       },
+//     },
+//   },
+//   { upsert: true },
+// );
+
+
+// db.supplies.updateOne(
+//   { _id: 1 },
+//   {
+//     $push: {
+//       items: {
+//         $each: [ // precisa dele se quiser adicionar varios de uma vez
+//           {
+//             "name" : "notepad",
+//             "price" : 35.29,
+//             "quantity" : 2,
+//           },
+//           {
+//             "name": "envelopes",
+//             "price": 19.95,
+//             "quantity": 8,
+//           },
+//           {
+//             "name": "pens",
+//             "price": 56.12,
+//             "quantity": 5,
+//           },
+//         ],
+//         $sort: { "quantity": -1 }, // ordena negativo decrescente, positivo crescente
+//         $slice: 3, // limita o tamanho do array
+//       },
+//     },
+//   },
+//   { upsert: true },
+// );
+
+// db.supplies.updateOne({ _id: 1 }, { $pop: { items: -1 } }); 
+// -1 remove o primeiro, 1 remove o ultimo
+
+// db.supplies.updateMany(
+//   {},
+//   {
+//     $pull: {
+//       items: {
+//         name: { $in: ["pens", "envelopes"] },
+//       }, // remove todos do array que atendem a condição
+//     },
+//   },
+// );
+
+// db.supplies.find()
+
+// db.profiles.updateOne(
+//   { _id: 1 },
+//   {
+//     $pull: {
+//       vores: { $gte: 6 },
+//     },
+//   },
+// );
+
+// db.profiles.find()
+
+// db.survey.updateMany(
+//   {},
+//   {
+//     $pull: {
+//       results: { score: 8 , item: "B" },
+//     },
+//   },
+// );
+
+// db.survey.find()
+
+// db.inventory.updateOne(
+//   { _id: 1 },
+//   { $addToSet: { tags: "accessories" } },
+// ); // tipo push so que faz verificação se o campo existe, se existir nao add
+
+// db.inventory.updateOne(
+//   { _id: 1 },
+//   {
+//     $addToSet: {
+//       tags: {
+//         $each: ["camera", "macaco", "botijao"],
+//       },
+//     },
+//   },
+// );
+
+db.inventory.find()
