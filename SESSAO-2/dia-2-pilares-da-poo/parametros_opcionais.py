@@ -1,3 +1,5 @@
+from dataclasses import dataclass
+
 class Pessoa:
     def __init__(self, nome:str, idade=None, saldo_na_conta=None) -> None:
         self.idade = idade
