@@ -1,0 +1,12 @@
+SELENIUM --------------------------
+
+docker pull selenium/standalone-firefox:106.0
+docker run -d -p 4444:4444 -p 7900:7900 --shm-size 2g --name firefox selenium/standalone-firefox:106.0
+
+pip3 install selenium
+pip3 install selenium==4.6.0
+mv geckodriver .venv/bin/ depois de instalar os drives do navegador
+
+
+BEAUTIFUL SOUP
+pip3 install beautifulsoup4==4.11.1 requests==2.27.1
