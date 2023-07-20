@@ -1,0 +1,3 @@
+use('trybnb');
+db.places.deleteOne({ _id: 11 })
+db.places.deleteMany({ "host.host_identity_verified": { $eq: false } })

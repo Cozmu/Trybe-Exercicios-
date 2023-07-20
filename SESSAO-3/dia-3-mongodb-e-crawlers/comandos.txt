@@ -1,0 +1,2 @@
+docker run --name mongodb_v6 -d -p 27017:27017 mongo:6.0
+docker exec -it mongodb_v6 mongosh
