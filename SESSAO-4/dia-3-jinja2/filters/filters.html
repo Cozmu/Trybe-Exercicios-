@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+      <meta charset="UTF-8">
+      <title>Filtros</title>
+  </head>
+  <body>
+      <p>{{ name|capitalize }}</p>
+      <p>{{ to_upper|upper }}</p>
+      <p>{{ to_lower|lower }}</p>
+      <p>{{ my_list|length }}</p>
+      <p>{{ variable|default("Valor padrão") }}</p>
+      <p>{{ text|truncate(20) }}</p>
+      <p>{{ date|convert_date }}</p>
+      <p>{{ text|replace_text("truncado", "trocado") }}</p>
+      <!-- <p>{{ text|replace_text(new_text="trocado", old_text="truncado") }}</p> -->
+  </body>
+</html>
