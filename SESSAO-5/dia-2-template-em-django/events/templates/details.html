@@ -1,0 +1,23 @@
+<!-- events/templates/details.html -->
+{% extends 'base.html' %}
+
+{% block title %}
+    {{ event.title }}
+{% endblock %}
+
+
+{% block content %}
+
+    <h1>{{ event.title }}</h1>
+
+    <p>{{ event.description }}</p>
+
+    <p>{{ event.date|date }} - {{ event.location }}</p>
+
+    {% if event.is_remote %}
+        <p> Evento remoto </p>
+    {% else %}
+        <p> Evento presencial </p>
+    {% endif %}
+
+{% endblock %}
