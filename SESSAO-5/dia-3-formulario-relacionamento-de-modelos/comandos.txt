@@ -1,0 +1,68 @@
+from playlists.forms import CreatePlaylistForm
+
+form = CreatePlaylistForm({}) # formulário instanciado com um dicionário vazio
+form.is_valid() # retorna False
+form.errors # retorna {'name': ['Este campo é obrigatório.'], 'is_active': ['Este campo é obrigatório.']}
+
+form_2 = CreatePlaylistForm({"name":"Essa playlist tem um nome com mais de cinquenta caracteres, o que você acha que vai acontecer?", "is_active": True})
+form_2.is_valid() # retorna False
+form_2.errors # retorna {'name': ['Certifique-se de que o valor tenha no máximo 50 caracteres (ele possui 94).']}
+
+form_3 = CreatePlaylistForm({"name":"Playlist de Estudo", "is_active": True})
+form_3.is_valid() # retorna True
+form_3.errors # retorna {}
+
+unbound_form = CreatePlaylistForm() #  formulário não vinculado
+unbound_form.is_valid() #  retorna False
+unbound_form.errors #  retorna {} Esse tipo de formulário não passa por validação
+
+======================================================================
+
+from playlists.forms import CreateMusicForm
+from playlists.models import Music
+
+form = CreateMusicForm({"name":"Be brave, Dev", "recorded_at":"2023-06-05", "length_in_seconds":180})
+
+if form.is_valid():
+    data = form.cleaned_data # data será igual à {"name":"Be brave, Dev", "recorded_at":"2023-06-05", "length_in_seconds":180}
+    Music.objects.create(**data) # criando um novo registro no banco com os dados do formulário
+    # Music.objects.create(**data) é o mesmo que Music.objects.create(name="Be brave, Dev", recorded_at="2023-06-05", length_in_seconds=180)
+
+    ================================================
+
+    from playlists.models import Music, Playlist
+
+music_1 = Music.objects.get(id=1) # retorna objeto Music com id = 1 e salva em music_1
+
+music_2 = Music.objects.get(id=2) # cria objeto Music com id = 2 e salva em music_2
+
+playlist_1 = Playlist.objects.create(name="Codando na Paz", is_active=True) # cria objeto Playlist com id = 1 e salva em playlist_1
+
+playlist_2 = Playlist.objects.create(name="Bora Treinar", is_active=True) # cria objeto Playlist com id = 2 e salva em playlist_2
+
+playlist_1.musics.all() # retorna todos os objetos Music associados ao objeto Playlist
+# saída: <QuerySet []>
+
+playlist_2.musics.all() # retorna todos os objetos Music associados ao objeto Playlist
+# saída: <QuerySet []>
+
+playlist_1.add_music(music_1) # adiciona objeto Music music_1 ao objeto Playlist
+
+playlist_1.musics.all() # retorna todos os objetos Music associados ao objeto Playlist
+# saída: <QuerySet [<Music: Snuff>]>
+
+playlist_2.add_music(music_1) # adiciona objeto Music music_1 ao objeto Playlist
+
+playlist_2.musics.all() # retorna todos os objetos Music associados ao objeto Playlist
+# saída: <QuerySet [<Music: Snuff>]>
+
+playlist_2.add_music(music_2) # adiciona objeto Music music_2 ao objeto Playlist
+
+playlist_2.musics.all() # retorna todos os objetos Music associados ao objeto Playlist
+# saída: <QuerySet [<Music: Snuff>, <Music: Through Glass>]>
+
+music_1.playlists.all() # retorna todos os objetos Playlist associados ao objeto Music
+# saída: <QuerySet [<Playlist: Codando na Paz>, <Playlist: Bora Treinar>]>
+
+music_2.playlists.all() # retorna todos os objetos Playlist associados ao objeto Music
+# saída: <QuerySet [<Playlist: Bora Treinar>]>
