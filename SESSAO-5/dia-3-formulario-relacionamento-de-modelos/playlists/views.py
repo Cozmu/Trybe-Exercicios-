@@ -25,6 +25,6 @@ def index(request):
 
 
 def singer(request):
-    form = CreateSingerForm() # nao existe
+    form = CreateSingerForm()
     context = {"form": form}
     return render(request, "singer.html", context)
